@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AMC Engineering | Engineering &amp; Fabrication, Waipukurau</title>
+<meta name="description" content="Stainless, aluminium and sheet steel fabrication, structural engineering and certified welding at 46 Takapau Road, Waipukurau. Trade shop on site. Call 027 314 1323.">
+<meta name="theme-color" content="#0c1420">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AMC Engineering | Engineering &amp; Fabrication, Waipukurau">
+<meta property="og:description" content="Fabrication, structural engineering and certified welding for Central Hawke's Bay, plus a trade shop on Takapau Road.">
+<meta property="og:image" content="https://amc-engineering-limited-demo.vercel.app/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --accent:#1a6ef0;        /* AMC logo blue */
+  --accent-hi:#4d8fff;
+  --char:#0c1420;          /* deep navy-black anchor */
+  --char-2:#121c2a;
+  --char-3:#1b2737;
+  --steel:#e8ebef;         /* light band, cool steel */
+  --bone:#f5f6f8;
+  --ink:#0c1420;
+  --muted:#9aa6b5;
+  --muted-dark:#4f5b6a;
+  --line:rgba(255,255,255,.1);
+  --display:'Big Shoulders Display', Impact, sans-serif;
+  --body:'IBM Plex Sans', Arial, sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);font-size:17px;line-height:1.6;color:#e3e7ec;background:var(--char);overflow-x:hidden}
+img{max-width:100%;height:auto;display:block;image-orientation:from-image}
+a{color:var(--accent-hi)}
+h1,h2,h3{font-family:var(--display);text-transform:uppercase;line-height:.95;margin:0 0 .45em;font-weight:900;letter-spacing:.01em}
+h2{font-size:clamp(2.5rem,6vw,4.8rem)}
+h3{font-size:1.8rem;font-weight:800}
+p{margin:0 0 1em}
+.wrap{max-width:1280px;margin:0 auto;padding:0 20px}
+section{padding:100px 0;position:relative}
+.band-dark{background:var(--char-2)}
+.band-light{background:var(--steel);color:var(--ink)}
+.band-bone{background:var(--bone);color:var(--ink)}
+.band-light .muted,.band-bone .muted{color:var(--muted-dark)}
+.muted{color:var(--muted)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-size:1.05rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-hi);margin-bottom:16px}
+.band-light .eyebrow,.band-bone .eyebrow{color:var(--accent)}
+.eyebrow::before{content:"";width:28px;height:3px;background:currentColor}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:48px}
+.section-head h2{margin:0;max-width:780px}
+.section-head p{max-width:400px;margin:0}
+.badge{display:inline-block;font-family:var(--body);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;background:var(--accent);color:#fff;vertical-align:middle;margin-left:10px;line-height:1.2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 26px;font-family:var(--display);font-size:1.2rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:2px solid transparent;transition:background .2s,color .2s,border-color .2s,transform .2s;cursor:pointer}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:#fff;color:var(--ink);transform:translateY(-2px)}
+.btn-ghost{border-color:#fff;color:#fff}
+.btn-ghost:hover{background:#fff;color:var(--ink)}
+.btn-dark{border-color:var(--ink);color:var(--ink)}
+.btn-dark:hover{background:var(--ink);color:#fff}
+.btn svg{width:20px;height:20px;flex:none}
+:focus-visible{outline:3px solid var(--accent-hi);outline-offset:3px}
+.icon{width:26px;height:26px;flex:none}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;color:#fff;transition:background .3s,box-shadow .3s}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:88px;transition:height .3s}
+.nav.scrolled{background:rgba(12,20,32,.96);box-shadow:0 1px 0 var(--line)}
+.nav.scrolled .wrap{height:66px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none}
+.logo img{height:48px;width:auto;transition:height .3s}
+.nav.scrolled .logo img{height:40px}
+.logo span{font-family:var(--display);font-weight:800;color:#fff;font-size:1rem;letter-spacing:.14em;text-transform:uppercase;line-height:1.1}
+.nav-links{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+.nav-links a{color:#fff;text-decoration:none;font-family:var(--display);font-weight:700;font-size:1.15rem;letter-spacing:.1em;text-transform:uppercase;position:relative;padding:4px 0}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--accent-hi);transition:width .25s}
+.nav-links a:hover::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:10px}
+.nav-call{min-height:46px;padding:8px 18px;font-size:1.1rem}
+.burger{display:none;background:none;border:0;color:#fff;width:46px;height:46px;padding:10px;cursor:pointer}
+@media (max-width:1060px){.logo span{display:none}}
+@media (max-width:960px){
+  .burger{display:block}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--char);padding:8px 20px 24px;border-top:3px solid var(--accent)}
+  .nav-links.open{display:flex}
+  .nav-links a{display:block;padding:14px 0;border-bottom:1px solid var(--line)}
+  .nav-call .label{display:none}
+  .nav-call{width:46px;padding:0}
+}
+@media (max-width:420px){.logo img{height:40px}.nav .wrap{height:74px}}
+
+/* HERO */
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;color:#fff;background:var(--char);overflow:hidden;padding:130px 0 60px}
+.hero-slides{position:absolute;inset:0}
+.hero-slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.02);transition:opacity 1.6s ease;filter:saturate(.8) contrast(1.08)}
+.hero-slides img.active{opacity:1;animation:kenburns 8s ease-out forwards}
+@keyframes kenburns{from{transform:scale(1.02) translate(0,0)}to{transform:scale(1.14) translate(-1.5%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,20,32,.86) 0%,rgba(12,20,32,.55) 55%,rgba(12,20,32,.35)),linear-gradient(0deg,rgba(12,20,32,.92),transparent 50%)}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero h1{font-size:clamp(2.9rem,10.5vw,8.6rem);margin-bottom:20px}
+.hero h1 .line{display:block;overflow:hidden;padding-bottom:.04em}
+.hero h1 .line span{display:block}
+.hero h1 .hl{color:var(--accent-hi)}
+.js .hero h1 .line span{transform:translateY(105%);animation:lineUp .9s cubic-bezier(.2,.8,.2,1) forwards}
+.js .hero h1 .line:nth-child(2) span{animation-delay:.15s}
+.js .hero h1 .line:nth-child(3) span{animation-delay:.3s}
+@keyframes lineUp{to{transform:translateY(0)}}
+.hero-bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:26px;flex-wrap:wrap}
+.hero p.lead{font-size:clamp(1.02rem,2vw,1.3rem);color:#d9dee5;max-width:560px;margin:0}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0 0}
+.js .hero-fade{opacity:0;animation:fadeIn .8s ease .6s forwards}
+@keyframes fadeIn{to{opacity:1}}
+.rating{display:inline-flex;align-items:center;gap:14px;padding:12px 18px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.rating .num{font-family:var(--display);font-size:2.3rem;font-weight:900;line-height:1}
+.stars{color:#ffc53d;letter-spacing:2px}
+.rating small{display:block;color:#cfd5dd;font-size:.82rem}
+.slide-dots{display:flex;gap:8px;margin-top:26px}
+.slide-dots span{width:40px;height:3px;background:rgba(255,255,255,.3);position:relative;overflow:hidden}
+.slide-dots span.on::after{content:"";position:absolute;inset:0;background:var(--accent-hi);animation:dot 6s linear forwards;transform-origin:left}
+@keyframes dot{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media (max-width:600px){
+  .hero{padding:104px 0 36px}
+  .hero h1{margin-bottom:14px}
+  .hero-ctas{margin-top:18px;gap:10px}
+  .hero-ctas .btn{flex:1 1 100%;min-height:50px}
+  .rating{padding:10px 14px}.rating .num{font-size:1.9rem}
+  .slide-dots{margin-top:18px}
+}
+
+/* TRUST */
+.trust{padding:0;background:var(--accent);color:#fff}
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.trust-item{display:flex;gap:14px;align-items:center;padding:26px 24px}
+.trust-item+.trust-item{border-left:2px solid rgba(255,255,255,.2)}
+.trust-item strong{display:block;font-family:var(--display);font-size:1.55rem;text-transform:uppercase;letter-spacing:.03em;line-height:1.1;font-weight:800}
+.trust-item span{font-size:.95rem;font-weight:500;color:#e8f0ff}
+@media (max-width:800px){.trust-grid{grid-template-columns:1fr}.trust-item+.trust-item{border-left:0;border-top:2px solid rgba(255,255,255,.2)}}
+
+/* SERVICES */
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:340px;gap:6px}
+.tile{position:relative;overflow:hidden;color:#fff;text-decoration:none;display:flex;align-items:flex-end;background:var(--char-3)}
+.tile.wide{grid-column:span 2}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.8) contrast(1.08);transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,20,32,.94) 0%,rgba(12,20,32,.4) 55%,rgba(12,20,32,.15))}
+.tile:hover img{transform:scale(1.08)}
+.tile-body{position:relative;z-index:2;padding:28px}
+.tile .num{font-family:var(--display);font-weight:800;color:var(--accent-hi);letter-spacing:.15em;font-size:1.05rem;text-shadow:0 1px 8px rgba(0,0,0,.85)}
+.tile h3{font-size:2.15rem;margin:4px 0 6px}
+.tile p{margin:0;color:#d3d9e0;max-width:440px;font-size:.98rem}
+.tile .tag{position:absolute;top:16px;left:16px;z-index:3;background:#fff;color:var(--ink);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 9px}
+@media (max-width:900px){.tiles{grid-template-columns:1fr 1fr;grid-auto-rows:300px}.tile.wide{grid-column:span 2}}
+@media (max-width:600px){.tiles{grid-template-columns:1fr;grid-auto-rows:280px}.tile.wide{grid-column:auto}}
+.stock-note{margin:18px 0 0;font-size:.85rem}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+.about-img{position:relative}
+.about-img img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:70% 100%;filter:saturate(.9) contrast(1.05)}
+.corner-tag{position:absolute;left:-1px;bottom:-1px;background:var(--accent);color:#fff;padding:18px 22px;font-family:var(--display);font-weight:900;font-size:1.35rem;text-transform:uppercase;letter-spacing:.06em;line-height:1.1}
+.checklist{list-style:none;padding:0;margin:26px 0 0}
+.checklist li{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(12,20,32,.12);font-weight:600;font-size:1.05rem}
+.checklist .icon{color:#fff;background:var(--accent);padding:4px;width:28px;height:28px}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr;gap:40px}}
+
+/* PARALLAX BAND */
+.parallax{padding:0;height:540px;overflow:hidden;display:flex;align-items:center;color:#fff}
+.parallax .bg{position:absolute;left:0;right:0;top:-20%;height:140%;background:var(--char-3) url('img/band-1920.webp') center/cover no-repeat;filter:saturate(.75) contrast(1.1);will-change:transform}
+.parallax::after{content:"";position:absolute;inset:0;background:rgba(12,20,32,.66)}
+.parallax .wrap{position:relative;z-index:2;width:100%}
+.materials{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.mat .n{font-family:var(--display);font-weight:900;font-size:clamp(3rem,6vw,5.4rem);line-height:.9;color:#fff;text-transform:uppercase}
+.mat .n em{font-style:normal;color:var(--accent-hi)}
+.mat p{font-family:var(--display);text-transform:uppercase;letter-spacing:.12em;font-size:1.15rem;font-weight:700;color:#d8dde4;margin:10px 0 0}
+.parallax .note{margin-top:34px;font-size:1rem;color:#cfd5dd;max-width:620px}
+@media (max-width:700px){.parallax{height:auto;padding:90px 0}.materials{grid-template-columns:1fr;gap:30px}}
+
+/* TEAM */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.team-card{background:#fff;padding:36px 28px;border-top:4px solid var(--accent);position:relative}
+.avatar{width:84px;height:84px;background:var(--char);color:#fff;display:grid;place-items:center;font-family:var(--display);font-size:2.1rem;font-weight:900;margin-bottom:20px;box-shadow:6px 6px 0 var(--accent)}
+.team-card h3{color:var(--ink);margin-bottom:.2em}
+.team-card .role{display:block;font-weight:700;color:var(--accent);font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.team-card p{margin:0;color:var(--muted-dark)}
+.team-card .ex{position:absolute;top:18px;right:18px;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--steel);color:var(--muted-dark);padding:4px 8px}
+@media (max-width:800px){.team-grid{grid-template-columns:1fr}}
+
+/* REVIEWS */
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.review{background:var(--char-3);padding:34px 30px;display:flex;flex-direction:column;gap:14px;position:relative}
+.review::before{content:"\201C";position:absolute;right:24px;top:0;font-family:var(--display);font-size:7rem;line-height:1;color:var(--accent-hi);opacity:.25}
+.review p{margin:0;flex:1;font-size:1.04rem}
+.review footer{font-size:.92rem;color:var(--muted)}
+.review footer strong{color:#fff;display:block;font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;font-size:1.2rem}
+.center{margin-top:36px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.center small{color:var(--muted)}
+@media (max-width:900px){.reviews-grid{grid-template-columns:1fr}}
+
+/* LEAVE A REVIEW */
+.review-banner{background:var(--accent);color:#fff;padding:60px 0}
+.review-banner .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.review-banner h2{margin:0;font-size:clamp(2rem,5vw,3.4rem)}
+.review-banner p{margin:6px 0 0;font-weight:500;color:#e8f0ff}
+.review-banner .btn{background:var(--char);color:#fff}
+.review-banner .btn:hover{background:#fff;color:var(--ink)}
+
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:60px}
+.faq-list details{border-bottom:1px solid rgba(12,20,32,.15)}
+.faq-list details:first-child{border-top:1px solid rgba(12,20,32,.15)}
+.faq-list summary{list-style:none;cursor:pointer;padding:22px 50px 22px 0;font-family:var(--display);font-size:1.5rem;font-weight:800;text-transform:uppercase;letter-spacing:.02em;position:relative;min-height:44px}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"";position:absolute;right:6px;top:50%;width:16px;height:16px;border-right:3px solid var(--accent);border-bottom:3px solid var(--accent);transform:translateY(-70%) rotate(45deg);transition:transform .3s}
+.faq-list details[open] summary::after{transform:translateY(-30%) rotate(225deg)}
+.faq-list details p{padding:0 0 22px;margin:0;color:var(--muted-dark)}
+@media (max-width:860px){.faq-grid{grid-template-columns:1fr;gap:20px}}
+
+/* CONTACT */
+.contact{background:var(--char)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.contact-rows{list-style:none;padding:0;margin:28px 0}
+.contact-rows li{display:flex;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);font-size:1.05rem}
+.contact-rows .icon{color:var(--accent-hi)}
+.contact-rows a{color:#fff;text-decoration:none}
+.contact-actions{display:flex;flex-direction:column;gap:10px}
+.contact-actions .btn{min-height:96px;font-size:1.65rem;justify-content:space-between;padding:20px 30px}
+.contact-actions .btn svg{width:30px;height:30px}
+.contact-actions .hint{font-size:.9rem;color:var(--muted);margin:6px 0 0}
+.socials{display:flex;gap:8px}
+.socials a{width:46px;height:46px;display:grid;place-items:center;background:var(--char-3);color:#fff;transition:background .2s,color .2s}
+.socials a:hover{background:var(--accent);color:#fff}
+.socials svg{width:20px;height:20px}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr;gap:40px}.contact-actions .btn{min-height:80px;font-size:1.35rem}}
+
+/* MAP */
+.map{padding:0;background:var(--char)}
+.map iframe{width:100%;height:440px;border:0;display:block;filter:grayscale(.5) contrast(1.05)}
+
+/* FOOTER */
+.footer{background:#070c14;color:#8793a2;padding:40px 0;font-size:.95rem;border-top:3px solid var(--accent)}
+.footer .wrap{display:flex;flex-wrap:wrap;gap:22px;justify-content:space-between;align-items:center}
+.footer a{color:#cdd3da;text-decoration:none}
+.footer a:hover{color:var(--accent-hi)}
+.footer-links{display:flex;flex-wrap:wrap;gap:20px}
+
+/* REVEALS */
+.js .reveal{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+.js .wipe>img{clip-path:inset(0 100% 0 0);transition:clip-path 1.1s cubic-bezier(.77,0,.18,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+.js .wipe-up>img{clip-path:inset(100% 0 0 0);transition:clip-path 1s cubic-bezier(.77,0,.18,1),transform .7s ease}
+.js .wipe.in>img,.js .wipe-up.in>img{clip-path:inset(0 0 0 0)}
+
+@media (max-width:600px){section{padding:70px 0}.map iframe{height:320px}.section-head{margin-bottom:34px}body{font-size:16.5px}}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
+  .js .wipe>img,.js .wipe-up>img{clip-path:none}
+  .js .hero h1 .line span{transform:none}
+  .js .hero-fade{opacity:1}
+  .hero-slides img.active{transform:none}
+  .parallax .bg{transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><path d="M5 12h14M13 5l7 7-7 7"/></symbol>
+  <symbol id="i-torch" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l7-7"/><path d="M10 14l3-3 4 4-3 3z"/><path d="M15 9l2-2 3 3-2 2"/><path d="M5 7l1.5 1M8 4l.5 2M3.5 11l2-.5"/></symbol>
+  <symbol id="i-beam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M3 5h18M3 19h18M12 5v14M8 5v2M16 5v2M8 17v2M16 17v2"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M8 3h8l4 4.5-4 4.5H8L4 7.5z"/><path d="M10 12v9M14 12v9M10 15h4M10 18h4"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.2c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.5V12h2.8v10H14V12h2.8l.4-3.5z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-tt" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.4v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.1a6.3 6.3 0 1 0 5.4 6.3V8.6a8 8 0 0 0 4.6 1.5V6.7a4.7 4.7 0 0 1-4.6-4.7z"/></symbol>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="AMC Engineering home">
+      <img src="img/amc-logo.png" alt="AMC Engineering Ltd" width="456" height="254">
+      <span>Waipukurau<br>Branch</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#shop">Trade shop</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a class="btn btn-primary nav-call" href="tel:+64273141323" aria-label="Call 027 314 1323"><svg class="icon"><use href="#i-phone"/></svg><span class="label">027 314 1323</span></a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero" aria-label="Introduction">
+  <div class="hero-slides" id="heroSlides">
+    <img class="active" src="img/hero-1-1920.webp" srcset="img/hero-1-1080.webp 1080w, img/hero-1-1920.webp 1920w, img/hero-1-2560.webp 2560w" sizes="100vw" alt="" width="1920" height="1280" fetchpriority="high">
+    <img src="img/hero-2-1920.webp" srcset="img/hero-2-1080.webp 1080w, img/hero-2-1920.webp 1920w, img/hero-2-2560.webp 2560w" sizes="100vw" alt="" width="1920" height="1280" loading="lazy">
+    <img src="img/hero-3-1920.webp" srcset="img/hero-3-1080.webp 1080w, img/hero-3-1920.webp 1920w, img/hero-3-2560.webp 2560w" sizes="100vw" alt="" width="1920" height="1283" loading="lazy">
+    <img src="img/hero-4-1920.webp" srcset="img/hero-4-1080.webp 1080w, img/hero-4-1920.webp 1920w, img/hero-4-2560.webp 2560w" sizes="100vw" alt="" width="1920" height="1280" loading="lazy">
+  </div>
+  <div class="wrap">
+    <span class="eyebrow hero-fade">Takapau Road &middot; Waipukurau</span>
+    <h1>
+      <span class="line"><span>Fabrication</span></span>
+      <span class="line"><span>and welding for</span></span>
+      <span class="line"><span class="hl">Central Hawke's Bay</span></span>
+    </h1>
+    <div class="hero-bottom hero-fade">
+      <div>
+        <p class="lead">Stainless, aluminium and sheet steel work, structural engineering and certified welding, from our workshop and trade shop on Takapau Road.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="tel:+64273141323"><svg class="icon"><use href="#i-phone"/></svg>Call 027 314 1323</a>
+          <a class="btn btn-ghost" href="#contact">Get a quote <svg class="icon"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+      <div class="rating" aria-label="Example rating, 5.0 on Google">
+        <span class="num">5.0</span>
+        <div><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><small>Google rating &middot; example</small></div>
+      </div>
+    </div>
+    <div class="slide-dots hero-fade" id="dots" aria-hidden="true"><span class="on"></span><span></span><span></span><span></span></div>
+  </div>
+</section>
+
+<section class="trust" aria-label="Why AMC">
+  <div class="wrap trust-grid">
+    <div class="trust-item"><svg class="icon"><use href="#i-pin"/></svg><div><strong>Right here in CHB</strong><span>46 Takapau Road, Waipukurau.</span></div></div>
+    <div class="trust-item"><svg class="icon"><use href="#i-torch"/></svg><div><strong>Certified welding</strong><span>Plus stainless, aluminium and steel fabrication.</span></div></div>
+    <div class="trust-item"><svg class="icon"><use href="#i-bolt"/></svg><div><strong>Trade shop on site</strong><span>Bolts, paint, oils, sealants and consumables.</span></div></div>
+  </div>
+</section>
+
+<section id="services" class="band-dark">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="eyebrow reveal">What we do</span><h2 class="reveal">Made, welded and fixed in Waipukurau</h2></div>
+      <p class="muted reveal">One-off jobs, repairs and bigger builds for farms, contractors, builders and local businesses. Bring in a drawing, a photo or the broken part.</p>
+    </div>
+    <div class="tiles">
+      <a href="#contact" class="tile wide wipe"><img src="img/stainless-1920.webp" srcset="img/stainless-1080.webp 1080w, img/stainless-1920.webp 1920w" sizes="(max-width:600px) 100vw, 66vw" alt="Welder fabricating a stainless steel unit in a workshop" width="1920" height="1280" loading="lazy"><div class="tile-body"><span class="num">01</span><h3>Stainless steel fabrication</h3><p>Benches, tanks, brackets, guards and custom stainless pieces built to your measurements.</p></div></a>
+      <a href="#contact" class="tile wipe"><img src="img/aluminium-1920.webp" srcset="img/aluminium-1080.webp 1080w, img/aluminium-1920.webp 1920w" sizes="(max-width:600px) 100vw, 33vw" alt="TIG welding on sheet metal" width="1280" height="1920" loading="lazy"><div class="tile-body"><span class="num">02</span><h3>Aluminium fabrication</h3><p>Light, strong aluminium work, from boxes and frames to repairs.</p></div></a>
+      <a href="#contact" class="tile wipe"><img src="img/sheet-1920.webp" srcset="img/sheet-1080.webp 1080w, img/sheet-1920.webp 1920w" sizes="(max-width:600px) 100vw, 33vw" alt="Cutting steel sheet in a workshop" width="1920" height="1080" loading="lazy"><div class="tile-body"><span class="num">03</span><h3>Sheet steel fabrication</h3><p>Cut, folded and welded sheet steel for covers, trays and enclosures.</p></div></a>
+      <a href="#contact" class="tile wipe"><img src="img/structural-1920.webp" srcset="img/structural-1080.webp 1080w, img/structural-1920.webp 1920w" sizes="(max-width:600px) 100vw, 33vw" alt="Welding steel beams on a workshop floor" width="1920" height="1280" loading="lazy"><div class="tile-body"><span class="num">04</span><h3>Structural engineering</h3><p>Steel beams, frames and structural pieces for builds and sheds.</p></div></a>
+      <a href="#contact" class="tile wipe"><img src="img/welding-1920.webp" srcset="img/welding-1080.webp 1080w, img/welding-1920.webp 1920w" sizes="(max-width:600px) 100vw, 33vw" alt="Welder at work under a welding helmet" width="1080" height="1920" loading="lazy"><div class="tile-body"><span class="num">05</span><h3>Certified welding</h3><p>For jobs that need the paperwork as well as a sound weld.</p></div></a>
+      <a href="#contact" class="tile wipe"><img src="img/repairs-1920.webp" srcset="img/repairs-1080.webp 1080w, img/repairs-1920.webp 1920w" sizes="(max-width:600px) 100vw, 33vw" alt="Welding repair on a heavy steel machine part" width="1920" height="1280" loading="lazy"><div class="tile-body"><span class="num">06</span><h3>General engineering</h3><p>Repairs and modifications to machinery, gear and gates that need to get back to work.</p></div></a>
+      <a href="#shop" class="tile wide wipe" id="shop"><img src="img/shop-1920.webp" srcset="img/shop-1080.webp 1080w, img/shop-1920.webp 1920w" sizes="(max-width:600px) 100vw, 66vw" alt="The AMC Engineering trade shop in Waipukurau, stocked with oils, sprays, sealants and cable ties" width="1920" height="1440" loading="lazy"><span class="tag">Our shop</span><div class="tile-body"><span class="num">07</span><h3>Trade shop and supplies</h3><p>Bolts and fasteners, paint, oils, sealants, welding consumables and engineering supplies. Drop in on your way past.</p></div></a>
+    </div>
+    <p class="muted stock-note reveal">Service photos 01 to 06 are illustrative stock images. The trade shop photo is from AMC's own Google listing.</p>
+  </div>
+</section>
+
+<section id="about" class="band-light">
+  <div class="wrap about-grid">
+    <div class="about-img wipe-up">
+      <img src="img/storefront-1920.webp" srcset="img/storefront-1080.webp 1080w, img/storefront-1920.webp 1920w" sizes="(max-width:860px) 100vw, 55vw" alt="The AMC Engineering Ltd sign at 46 Takapau Road, Waipukurau" width="1920" height="1218" loading="lazy">
+      <div class="corner-tag">46 Takapau Rd<br>Waipukurau</div>
+    </div>
+    <div>
+      <span class="eyebrow reveal">About us</span>
+      <h2 class="reveal">Local engineers, a short drive from your job</h2>
+      <p class="muted reveal">AMC Engineering opened this Waipukurau workshop as a second branch, expanding from its Havelock North base so Central Hawke's Bay has a proper engineering shop close to home.</p>
+      <p class="muted reveal">We're a team of local engineers doing fabrication, structural work and certified welding, with a trade shop out the front for the bits you need today.</p>
+      <ul class="checklist reveal">
+        <li><svg class="icon"><use href="#i-check"/></svg>Workshop and trade shop in Waipukurau</li>
+        <li><svg class="icon"><use href="#i-check"/></svg>Stainless, aluminium and steel under one roof</li>
+        <li><svg class="icon"><use href="#i-check"/></svg>Straight answers and a clear quote before we start</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="parallax" aria-label="Materials we work with">
+  <div class="bg" id="parallaxBg"></div>
+  <div class="wrap">
+    <div class="materials">
+      <div class="mat reveal"><div class="n">Stain<em>less</em></div><p>Food, farm and water gear</p></div>
+      <div class="mat reveal"><div class="n">Alumin<em>ium</em></div><p>Light, strong and rust-free</p></div>
+      <div class="mat reveal"><div class="n">Ste<em>el</em></div><p>Sheet, structural and repairs</p></div>
+    </div>
+    <p class="note reveal">Open Monday to Friday from 6am. Call ahead or just come down and see us.</p>
+  </div>
+</section>
+
+<section id="team" class="band-bone">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="eyebrow reveal">The team</span><h2 class="reveal">Who you'll deal with</h2></div>
+      <p class="muted reveal">A local crew of engineers and fabricators. Ring Nathan to talk through a job.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal"><div class="avatar">N</div><h3>Nathan</h3><span class="role">Your first call</span><p>Talks through the job, prices it up and keeps you posted on where it's at.</p></div>
+      <div class="team-card reveal"><span class="ex">Example</span><div class="avatar">FW</div><h3>Fabricators and welders</h3><span class="role">On the tools</span><p>Build, weld and repair your job in the workshop, from stainless to structural steel.</p></div>
+      <div class="team-card reveal"><span class="ex">Example</span><div class="avatar">TS</div><h3>Trade shop</h3><span class="role">Front counter</span><p>Finds the right bolts, oils, paint or consumables so you're back at work quickly.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="band-dark">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="eyebrow reveal">Google reviews</span><h2 class="reveal">What locals say <span class="badge">Example reviews</span></h2></div>
+      <p class="muted reveal">AMC's Waipukurau Google listing doesn't have written reviews yet. These examples show how real ones will appear here.</p>
+    </div>
+    <div class="reviews-grid">
+      <article class="review reveal"><div class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Snapped a bracket on the tractor loader right in the middle of feeding out. Dropped it in first thing and had it back welded up the same week. Stronger than the original."</p><footer><strong>Hamish R.</strong>Takapau &middot; example</footer></article>
+      <article class="review reveal"><div class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Needed a stainless bench made to fit an odd space in our kitchen. They measured twice, gave me a clear price and the finish is spot on."</p><footer><strong>Mere T.</strong>Waipawa &middot; example</footer></article>
+      <article class="review reveal"><div class="stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Handy having a proper engineering shop in Waipuk now. Grab my bolts, oil and welding wire at the counter and have a yarn about the next job while I'm there."</p><footer><strong>Craig M.</strong>Otane &middot; example</footer></article>
+    </div>
+    <div class="center reveal"><a class="btn btn-ghost" href="https://www.google.com/maps/place/?q=place_id:ChIJGYxzF_4LQm0Rvtw_6OcSN5o" target="_blank" rel="noopener">See us on Google <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+  </div>
+</section>
+
+<section class="review-banner" aria-label="Leave a review">
+  <div class="wrap">
+    <div><h2>Happy with the job? Leave us a review</h2><p>It helps other Central Hawke's Bay locals find a good engineering shop.</p></div>
+    <a class="btn" href="https://search.google.com/local/writereview?placeid=ChIJGYxzF_4LQm0Rvtw_6OcSN5o" target="_blank" rel="noopener">Leave a Google review</a>
+  </div>
+</section>
+
+<section id="faq" class="band-light">
+  <div class="wrap faq-grid">
+    <div><span class="eyebrow reveal">FAQ</span><h2 class="reveal">Before you call</h2><p class="muted reveal">Still not sure? Ring 027 314 1323 and ask.</p></div>
+    <div class="faq-list reveal">
+      <details><summary>What kind of work do you take on?</summary><p>Stainless steel, aluminium and sheet steel fabrication, structural engineering, certified welding and general engineering repairs. If you're not sure whether it's our kind of job, call and describe it.</p></details>
+      <details><summary>How do I get a quote?</summary><p>Call or email us with what you need: photos, a sketch or drawing, rough measurements, the material if you know it, and when you need it by. We'll come back to you with a price.</p></details>
+      <details><summary>Can I just drop into the shop?</summary><p>Yes. The trade shop at 46 Takapau Road stocks bolts and fasteners, paint, oils, sealants, welding consumables and engineering supplies. Our Google listing shows Monday to Friday, 6am to 4.30pm. If you're after something specific, call ahead to check it's in stock.</p></details>
+      <details><summary>My job needs certified welding. Can you do it?</summary><p>Certified welding is one of our services. Tell us the standard or spec your job needs when you call, so we can confirm we can sign it off before we start.</p></details>
+      <details><summary>Do you come out on site?</summary><p>Ask us when you call. Tell us where the job is and what's involved, and we'll let you know whether it's a workshop job or something we can sort on site.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow reveal">Contact</span>
+      <h2 class="reveal">Got something that needs making or fixing?</h2>
+      <p class="muted reveal">Call for a quote, email us the details with a photo, or come down to Takapau Road.</p>
+      <ul class="contact-rows reveal">
+        <li><svg class="icon"><use href="#i-phone"/></svg><a href="tel:+64273141323">027 314 1323</a></li>
+        <li><svg class="icon"><use href="#i-mail"/></svg><span id="emailText">nathan [at] amc.co.nz</span></li>
+        <li><svg class="icon"><use href="#i-pin"/></svg><a href="https://www.google.com/maps/place/?q=place_id:ChIJGYxzF_4LQm0Rvtw_6OcSN5o" target="_blank" rel="noopener">46 Takapau Road, Waipukurau 4200</a></li>
+        <li><svg class="icon"><use href="#i-clock"/></svg><span>Mon to Fri, 6am to 4.30pm</span></li>
+      </ul>
+      <div class="socials reveal">
+        <a href="https://www.instagram.com/explore/search/keyword/?q=AMC%20Engineering%20Waipukurau" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+        <a href="https://www.facebook.com/AMCEngineeringLtd46/" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+        <a href="https://www.tiktok.com/search?q=AMC%20Engineering%20Waipukurau" target="_blank" rel="noopener" aria-label="TikTok"><svg><use href="#i-tt"/></svg></a>
+      </div>
+    </div>
+    <div class="contact-actions">
+      <a class="btn btn-primary reveal" href="tel:+64273141323">Call for a quote <svg class="icon"><use href="#i-phone"/></svg></a>
+      <a class="btn btn-ghost reveal" href="#" data-gmail data-user="nathan" data-domain="amc.co.nz" data-su="Engineering%20job%20enquiry" data-body="Hi%20Nathan%2C%0A%0AI'd%20like%20a%20quote%20for%3A%0A%0AMaterial%20(if%20known)%3A%0ARough%20measurements%3A%0AWhen%20I%20need%20it%20by%3A%0A%0AI'll%20attach%20a%20photo%20or%20drawing.%0A%0AThanks">Email us the job <svg class="icon"><use href="#i-mail"/></svg></a>
+      <p class="hint reveal">The email button opens a new message in Gmail with the details to fill in. Attach a photo or drawing if you have one.</p>
+    </div>
+  </div>
+</section>
+
+<section class="map" aria-label="Map">
+  <iframe title="Map to AMC Engineering, 46 Takapau Road, Waipukurau" src="https://www.google.com/maps?q=AMC+Engineering+Limited,+46+Takapau+Road,+Waipukurau+4200&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>&copy; <span id="year">2026</span> AMC Engineering Ltd &middot; 46 Takapau Road, Waipukurau</span>
+    <div class="footer-links">
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="https://search.google.com/local/writereview?placeid=ChIJGYxzF_4LQm0Rvtw_6OcSN5o" target="_blank" rel="noopener">Leave a review</a>
+    </div>
+    <div class="socials">
+      <a href="https://www.instagram.com/explore/search/keyword/?q=AMC%20Engineering%20Waipukurau" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+      <a href="https://www.facebook.com/AMCEngineeringLtd46/" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+      <a href="https://www.tiktok.com/search?q=AMC%20Engineering%20Waipukurau" target="_blank" rel="noopener" aria-label="TikTok"><svg><use href="#i-tt"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+var burger=document.getElementById('burger'),links=document.getElementById('navLinks');
+burger.addEventListener('click',function(){var o=links.classList.toggle('open');burger.setAttribute('aria-expanded',o);});
+links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open');burger.setAttribute('aria-expanded','false');});});
+
+var nav=document.getElementById('nav'),pbg=document.getElementById('parallaxBg'),ticking=false;
+function onScroll(){
+  nav.classList.toggle('scrolled',window.scrollY>40);
+  if(!reduce&&pbg){var r=pbg.parentElement.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight){pbg.style.transform='translate3d(0,'+((r.top-innerHeight/2)*-0.18)+'px,0)';}}
+  ticking=false;
+}
+window.addEventListener('scroll',function(){if(!ticking){requestAnimationFrame(onScroll);ticking=true;}},{passive:true});
+onScroll();
+
+var slides=document.querySelectorAll('#heroSlides img'),dots=document.querySelectorAll('#dots span'),cur=0;
+if(!reduce&&slides.length>1){
+  setInterval(function(){
+    slides[cur].classList.remove('active');dots[cur].classList.remove('on');
+    cur=(cur+1)%slides.length;
+    void slides[cur].offsetWidth;
+    slides[cur].classList.add('active');dots[cur].classList.add('on');
+  },6000);
+}
+
+var targets=document.querySelectorAll('.reveal,.wipe,.wipe-up');
+if('IntersectionObserver' in window&&!reduce){
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var el=e.target,sibs=Array.prototype.filter.call(el.parentElement.children,function(c){return c.matches('.reveal,.wipe,.wipe-up');});
+      var d=(Math.max(0,sibs.indexOf(el))*0.1)+'s',img=el.querySelector(':scope>img');
+      if(img){img.style.transitionDelay=d+',0s';img.addEventListener('transitionend',function(){img.style.transitionDelay='';},{once:true});}
+      else{el.style.transitionDelay=d;}
+      el.classList.add('in');
+      io.unobserve(el);
+    });
+  },{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+  targets.forEach(function(el){io.observe(el);});
+}else{
+  targets.forEach(function(el){el.classList.add('in');});
+}
+
+document.querySelectorAll('a[data-gmail]').forEach(function(a){var to=a.getAttribute('data-user')+'@'+a.getAttribute('data-domain');a.href='https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent(to)+'&su='+(a.getAttribute('data-su')||'')+'&body='+(a.getAttribute('data-body')||'');a.target='_blank';a.rel='noopener';});
+var et=document.getElementById('emailText');if(et)et.textContent='nathan'+'@'+'amc.co.nz';
+
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
