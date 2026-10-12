@@ -158,6 +158,12 @@ section{padding:100px 0;position:relative}
 @media (max-width:600px){.tiles{grid-template-columns:1fr;grid-auto-rows:280px}.tile.wide{grid-column:auto}}
 .stock-note{margin:18px 0 0;font-size:.85rem}
 
+/* OUR WORK */
+.work-grid{columns:3 300px;column-gap:6px}
+.work-item{break-inside:avoid;margin:0 0 6px;position:relative;background:var(--char-3)}
+.work-item img{width:100%;height:auto;filter:saturate(.9) contrast(1.05)}
+.work-item figcaption{position:absolute;left:0;bottom:0;background:rgba(12,20,32,.88);color:#fff;font-family:var(--display);font-weight:800;font-size:1.05rem;letter-spacing:.08em;text-transform:uppercase;padding:8px 14px;line-height:1.2;max-width:100%}
+
 /* ABOUT */
 .about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
 .about-img{position:relative}
@@ -235,6 +241,19 @@ section{padding:100px 0;position:relative}
 .socials a{width:46px;height:46px;display:grid;place-items:center;background:var(--char-3);color:#fff;transition:background .2s,color .2s}
 .socials a:hover{background:var(--accent);color:#fff}
 .socials svg{width:20px;height:20px}
+.branch-label{font-size:1.5rem;color:#fff;margin:26px 0 0}
+.branch{margin-top:70px;padding-top:50px;border-top:1px solid var(--line)}
+.branch h3{font-size:clamp(1.9rem,4vw,2.6rem);color:#fff}
+.branch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:20px}
+.branch-card{background:var(--char-2);border-top:4px solid var(--accent);padding:26px 24px}
+.branch-card h4{margin:0 0 2px;font-family:var(--display);font-size:1.6rem;font-weight:800;text-transform:uppercase;color:#fff;line-height:1.1}
+.branch-card .role{display:block;font-weight:700;color:var(--accent-hi);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+.branch-card ul{list-style:none;padding:0;margin:0}
+.branch-card li{display:flex;gap:12px;align-items:center;padding:8px 0;font-size:1.02rem;overflow-wrap:anywhere}
+.branch-card .icon{color:var(--accent-hi);width:22px;height:22px}
+.branch-card a{color:#fff;text-decoration:none}
+.branch-card a:hover{color:var(--accent-hi)}
+@media (max-width:900px){.branch-grid{grid-template-columns:1fr}}
 @media (max-width:860px){.contact-grid{grid-template-columns:1fr;gap:40px}.contact-actions .btn{min-height:80px;font-size:1.35rem}}
 
 /* MAP */
@@ -294,6 +313,7 @@ section{padding:100px 0;position:relative}
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#services">Services</a></li>
+      <li><a href="#work">Our work</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#shop">Trade shop</a></li>
       <li><a href="#reviews">Reviews</a></li>
@@ -366,6 +386,25 @@ section{padding:100px 0;position:relative}
       <a href="#shop" class="tile wide wipe" id="shop"><img src="img/shop-1920.webp" srcset="img/shop-1080.webp 1080w, img/shop-1920.webp 1920w" sizes="(max-width:600px) 100vw, 66vw" alt="The AMC Engineering trade shop in Waipukurau, stocked with oils, sprays, sealants and cable ties" width="1920" height="1440" loading="lazy"><span class="tag">Our shop</span><div class="tile-body"><span class="num">07</span><h3>Trade shop and supplies</h3><p>Bolts and fasteners, paint, oils, sealants, welding consumables and engineering supplies. Drop in on your way past.</p></div></a>
     </div>
     <p class="muted stock-note reveal">Service photos 01 to 06 are illustrative stock images. The trade shop photo is from AMC's own Google listing.</p>
+  </div>
+</section>
+
+<section id="work" class="band-dark">
+  <div class="wrap">
+    <div class="section-head">
+      <div><span class="eyebrow reveal">Our work</span><h2 class="reveal">Jobs we've built</h2></div>
+      <p class="muted reveal">A few recent jobs from the AMC workshops, from farm pipework to stainless processing gear.</p>
+    </div>
+    <div class="work-grid">
+      <figure class="work-item reveal"><img src="img/work-flaker-1920.webp" srcset="img/work-flaker-1080.webp 1080w, img/work-flaker-1920.webp 1920w" sizes="(max-width:640px) 100vw, (max-width:960px) 50vw, 33vw" alt="Two stainless steel processing machines with conveyor belts and a stainless bin on a factory floor" width="1920" height="1508" loading="lazy"><figcaption>Stainless processing line</figcaption></figure>
+      <figure class="work-item reveal"><img src="img/work-pump-1920.webp" srcset="img/work-pump-1080.webp 1080w, img/work-pump-1920.webp 1920w" sizes="(max-width:640px) 100vw, (max-width:960px) 50vw, 33vw" alt="Galvanised pipework and a green pump on a new concrete pad on a farm" width="1920" height="1920" loading="lazy"><figcaption>Pump and pipework</figcaption></figure>
+      <figure class="work-item reveal"><img src="img/work-nudge-bar-1920.webp" srcset="img/work-nudge-bar-1080.webp 1080w, img/work-nudge-bar-1920.webp 1920w" sizes="(max-width:640px) 100vw, (max-width:960px) 50vw, 33vw" alt="Stainless steel nudge bar and ladder rack fitted to the front of a Toyota van" width="1811" height="1920" loading="lazy"><figcaption>Nudge bar and rack</figcaption></figure>
+      <figure class="work-item reveal"><img src="img/work-exhaust-1920.webp" srcset="img/work-exhaust-1080.webp 1080w, img/work-exhaust-1920.webp 1920w" sizes="(max-width:640px) 100vw, (max-width:960px) 50vw, 33vw" alt="Twin stainless steel exhaust pipes fitted over an engine in an open hatch" width="1440" height="1920" loading="lazy"><figcaption>Stainless exhaust pipework</figcaption></figure>
+      <figure class="work-item reveal"><img src="img/work-freezer-1920.webp" srcset="img/work-freezer-1080.webp 1080w, img/work-freezer-1920.webp 1920w" sizes="(max-width:640px) 100vw, (max-width:960px) 50vw, 33vw" alt="Galvanised steel framing going up inside a freezer room, with a scissor lift and insulated panels" width="1440" height="1920" loading="lazy"><figcaption>Freezer room framing</figcaption></figure>
+      <figure class="work-item reveal"><img src="img/work-pipeline-1920.webp" srcset="img/work-pipeline-1080.webp 1080w, img/work-pipeline-1920.webp 1920w" sizes="(max-width:640px) 100vw, (max-width:960px) 50vw, 33vw" alt="Long run of galvanised pipeline on steel stands over freshly worked ground" width="1920" height="1440" loading="lazy"><figcaption>Galvanised pipeline</figcaption></figure>
+      <figure class="work-item reveal"><img src="img/work-trailer-1920.webp" srcset="img/work-trailer-1080.webp 1080w, img/work-trailer-1920.webp 1920w" sizes="(max-width:640px) 100vw, (max-width:960px) 50vw, 33vw" alt="Steel transport trailer with a sloped deck, built and parked outside a workshop" width="1920" height="1440" loading="lazy"><figcaption>Transport trailer</figcaption></figure>
+      <figure class="work-item reveal"><img src="img/work-stairs-1920.webp" srcset="img/work-stairs-1080.webp 1080w, img/work-stairs-1920.webp 1920w" sizes="(max-width:640px) 100vw, (max-width:960px) 50vw, 33vw" alt="Open-tread steel staircase with a landing, installed in a new home" width="1208" height="1920" loading="lazy"><figcaption>Steel staircase</figcaption></figure>
+    </div>
   </div>
 </section>
 
@@ -456,6 +495,7 @@ section{padding:100px 0;position:relative}
       <span class="eyebrow reveal">Contact</span>
       <h2 class="reveal">Got something that needs making or fixing?</h2>
       <p class="muted reveal">Call for a quote, email us the details with a photo, or come down to Takapau Road.</p>
+      <h3 class="branch-label reveal">Waipukurau branch</h3>
       <ul class="contact-rows reveal">
         <li><svg class="icon"><use href="#i-phone"/></svg><a href="tel:+64273141323">027 314 1323</a></li>
         <li><svg class="icon"><use href="#i-mail"/></svg><span id="emailText">nathan [at] amc.co.nz</span></li>
@@ -472,6 +512,15 @@ section{padding:100px 0;position:relative}
       <a class="btn btn-primary reveal" href="tel:+64273141323">Call for a quote <svg class="icon"><use href="#i-phone"/></svg></a>
       <a class="btn btn-ghost reveal" href="#" data-gmail data-user="nathan" data-domain="amc.co.nz" data-su="Engineering%20job%20enquiry" data-body="Hi%20Nathan%2C%0A%0AI'd%20like%20a%20quote%20for%3A%0A%0AMaterial%20(if%20known)%3A%0ARough%20measurements%3A%0AWhen%20I%20need%20it%20by%3A%0A%0AI'll%20attach%20a%20photo%20or%20drawing.%0A%0AThanks">Email us the job <svg class="icon"><use href="#i-mail"/></svg></a>
       <p class="hint reveal">The email button opens a new message in Gmail with the details to fill in. Attach a photo or drawing if you have one.</p>
+    </div>
+  </div>
+  <div class="wrap branch" id="havelock">
+    <span class="eyebrow reveal">Havelock North branch</span>
+    <h3 class="reveal">Havelock North contacts</h3>
+    <div class="branch-grid">
+      <div class="branch-card reveal"><h4>Address</h4><span class="role">Havelock North branch</span><ul><li><svg class="icon"><use href="#i-pin"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=334+Napier+Road,+Havelock+North,+Hastings" target="_blank" rel="noopener">334 Napier Road, Havelock North, Hastings</a></li></ul></div>
+      <div class="branch-card reveal"><h4>Allan</h4><span class="role">Engineering</span><ul><li><svg class="icon"><use href="#i-phone"/></svg><a href="tel:+6421451330">021 451 330</a></li><li><svg class="icon"><use href="#i-mail"/></svg><a href="#" data-mail data-user="allan" data-domain="amc.co.nz">allan [at] amc.co.nz</a></li></ul></div>
+      <div class="branch-card reveal"><h4>Nick</h4><span class="role">Mechanical</span><ul><li><svg class="icon"><use href="#i-phone"/></svg><a href="tel:+6421479561">021 479 561</a></li><li><svg class="icon"><use href="#i-mail"/></svg><a href="#" data-mail data-user="nick" data-domain="amc.co.nz">nick [at] amc.co.nz</a></li></ul></div>
     </div>
   </div>
 </section>
@@ -543,6 +592,7 @@ if('IntersectionObserver' in window&&!reduce){
 }
 
 document.querySelectorAll('a[data-gmail]').forEach(function(a){var to=a.getAttribute('data-user')+'@'+a.getAttribute('data-domain');a.href='https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent(to)+'&su='+(a.getAttribute('data-su')||'')+'&body='+(a.getAttribute('data-body')||'');a.target='_blank';a.rel='noopener';});
+document.querySelectorAll('a[data-mail]').forEach(function(a){var to=a.getAttribute('data-user')+'@'+a.getAttribute('data-domain');a.href='mailto:'+to;a.textContent=to;});
 var et=document.getElementById('emailText');if(et)et.textContent='nathan'+'@'+'amc.co.nz';
 
 document.getElementById('year').textContent=new Date().getFullYear();
