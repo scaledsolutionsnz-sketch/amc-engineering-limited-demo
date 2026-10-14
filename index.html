@@ -161,6 +161,17 @@ section{padding:100px 0;position:relative}
 @media (max-width:600px){.tiles{grid-template-columns:1fr;grid-auto-rows:280px}.tile.wide,.tile.shop-tile{grid-column:auto}}
 .stock-note{margin:18px 0 0;font-size:.85rem}
 
+/* LASER CUTTING */
+.laser-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:start;margin-bottom:48px}
+.laser-lead{font-size:1.15rem;font-weight:600;margin:0 0 1em}
+.cap-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;list-style:none;padding:0;margin:0}
+.cap{background:var(--char);color:#fff;padding:22px 24px}
+.cap .mm{display:block;font-family:var(--display);font-weight:900;font-size:clamp(2.4rem,5vw,3.4rem);line-height:1;color:var(--accent-hi)}
+.cap .mat-name{display:block;font-family:var(--display);font-weight:800;font-size:1.15rem;letter-spacing:.1em;text-transform:uppercase;margin-top:8px}
+.cap-note{margin:14px 0 0;font-weight:600}
+@media (max-width:860px){.laser-grid{grid-template-columns:1fr;gap:32px}}
+@media (max-width:380px){.cap{padding:18px 16px}}
+
 /* OUR WORK */
 .work-grid{columns:3 300px;column-gap:6px}
 .work-item{break-inside:avoid;margin:0 0 6px;position:relative;background:var(--char-3)}
@@ -322,6 +333,7 @@ section{padding:100px 0;position:relative}
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#services">Services</a></li>
+      <li><a href="#laser">Laser</a></li>
       <li><a href="#work">Our work</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#shop">Trade shop</a></li>
@@ -392,10 +404,40 @@ section{padding:100px 0;position:relative}
       <a href="#contact" class="tile wipe"><img src="img/structural-1920.webp" srcset="img/structural-1080.webp 1080w, img/structural-1920.webp 1920w" sizes="(max-width:600px) 100vw, 33vw" alt="Welding steel beams on a workshop floor" width="1920" height="1280" loading="lazy"><div class="tile-body"><span class="num">04</span><h3>Structural engineering</h3><p>Steel beams, frames and structural pieces for builds and sheds.</p></div></a>
       <a href="#contact" class="tile wipe"><img src="img/welding-1920.webp" srcset="img/welding-1080.webp 1080w, img/welding-1920.webp 1920w" sizes="(max-width:600px) 100vw, 33vw" alt="Welder at work under a welding helmet" width="1080" height="1920" loading="lazy"><div class="tile-body"><span class="num">05</span><h3>Certified welding</h3><p>For jobs that need the paperwork as well as a sound weld.</p></div></a>
       <a href="#contact" class="tile wipe"><img src="img/repairs-1920.webp" srcset="img/repairs-1080.webp 1080w, img/repairs-1920.webp 1920w" sizes="(max-width:600px) 100vw, 33vw" alt="Welding repair on a heavy steel machine part" width="1920" height="1280" loading="lazy"><div class="tile-body"><span class="num">06</span><h3>General engineering</h3><p>Repairs and modifications to machinery, gear and gates that need to get back to work.</p></div></a>
-      <a href="#contact" class="tile tile-plain wipe"><svg class="tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v7"/><path d="M9 2h6"/><path d="M12 13v2"/><path d="m8.5 11.5-1.5-1.5"/><path d="m15.5 11.5 1.5-1.5"/><path d="M3 18h18"/><path d="M5 22l2-4"/><path d="M19 22l-2-4"/><circle cx="12" cy="11" r="0.6" fill="currentColor"/></svg><div class="tile-body"><span class="num">07</span><h3>CAD design and laser cutting</h3><p>We can draw up your part in CAD and laser cut it at our Waipukurau branch.</p></div></a>
+      <a href="#laser" class="tile tile-plain wipe"><svg class="tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v7"/><path d="M9 2h6"/><path d="M12 13v2"/><path d="m8.5 11.5-1.5-1.5"/><path d="m15.5 11.5 1.5-1.5"/><path d="M3 18h18"/><path d="M5 22l2-4"/><path d="M19 22l-2-4"/><circle cx="12" cy="11" r="0.6" fill="currentColor"/></svg><div class="tile-body"><span class="num">07</span><h3>CAD design and laser cutting</h3><p>We can draw up your part in CAD and laser cut or etch it at our Waipukurau branch, on the only fibre/CO2 laser cutter in Central Hawke's Bay.</p></div></a>
       <a href="#shop" class="tile shop-tile wipe" id="shop"><img src="img/shop-1920.webp" srcset="img/shop-1080.webp 1080w, img/shop-1920.webp 1920w" sizes="(max-width:600px) 100vw, 66vw" alt="The AMC Engineering Ltd trade shop in Waipukurau, stocked with oils, sprays, sealants and cable ties" width="1920" height="1440" loading="lazy"><span class="tag">Our shop</span><div class="tile-body"><span class="num">08</span><h3>Trade shop and supplies</h3><p>Bolts and fasteners, paint, oils, sealants, welding consumables and engineering supplies. Drop in on your way past.</p></div></a>
     </div>
     <p class="muted stock-note reveal">Service photos 01 to 06 are illustrative stock images. The trade shop photo is from the AMC Engineering Ltd Google listing.</p>
+  </div>
+</section>
+
+<section id="laser" class="band-bone">
+  <div class="wrap">
+    <div class="laser-grid">
+      <div>
+        <span class="eyebrow reveal">Laser cutting</span>
+        <h2 class="reveal">The only fibre/CO2 laser cutter in CHB</h2>
+        <p class="laser-lead reveal">AMC Engineering Ltd has the only fibre/CO2 laser cutter in Central Hawke's Bay, at our Waipukurau branch.</p>
+        <p class="muted reveal">We can draw up your part in CAD, then cut it in metal or plywood. We can etch onto all of these materials too, for names, logos and markings.</p>
+        <a class="btn btn-dark reveal" href="#contact">Ask about laser cutting <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="reveal">
+        <ul class="cap-grid" aria-label="Laser cutting thickness, up to">
+          <li class="cap"><span class="mm">8mm</span><span class="mat-name">Aluminium</span></li>
+          <li class="cap"><span class="mm">10mm</span><span class="mat-name">Stainless steel</span></li>
+          <li class="cap"><span class="mm">20mm</span><span class="mat-name">Mild steel</span></li>
+          <li class="cap"><span class="mm">10mm</span><span class="mat-name">Plywood</span></li>
+        </ul>
+        <p class="cap-note">Cutting thickness, up to. We can etch onto all four materials too.</p>
+      </div>
+    </div>
+    <div class="work-grid">
+      <figure class="work-item reveal"><img src="img/laser-machine-1920.webp" srcset="img/laser-machine-1080.webp 1080w, img/laser-machine-1920.webp 1920w" sizes="(max-width:640px) 100vw, (max-width:960px) 50vw, 33vw" alt="The laser cutter inside the AMC Engineering Ltd Waipukurau workshop, with a yellow jib crane beside it" width="1080" height="1920" loading="lazy"><figcaption>Our laser cutter</figcaption></figure>
+      <figure class="work-item reveal"><img src="img/laser-plywood-sign-1920.webp" srcset="img/laser-plywood-sign-1080.webp 1080w, img/laser-plywood-sign-1920.webp 1920w" sizes="(max-width:640px) 100vw, (max-width:960px) 50vw, 33vw" alt="Laser cut plywood sign for the Waipukurau Volunteer Fire Brigade, with a ram's head, ladders and EST 1912" width="1920" height="1080" loading="lazy"><figcaption>Plywood fire brigade sign</figcaption></figure>
+      <figure class="work-item reveal"><img src="img/laser-magpie-1920.webp" srcset="img/laser-magpie-1080.webp 1080w, img/laser-magpie-1920.webp 1920w" sizes="(max-width:640px) 100vw, (max-width:960px) 50vw, 33vw" alt="Black laser cut steel magpie on a branch, mounted on a white panel" width="1080" height="1920" loading="lazy"><figcaption>Steel magpie</figcaption></figure>
+      <figure class="work-item reveal"><img src="img/laser-gate-1920.webp" srcset="img/laser-gate-1080.webp 1080w, img/laser-gate-1920.webp 1920w" sizes="(max-width:640px) 100vw, (max-width:960px) 50vw, 33vw" alt="Steel driveway gate with a laser cut emblem in the middle, fitted at a house" width="1920" height="1080" loading="lazy"><figcaption>Gate with cut emblem</figcaption></figure>
+      <figure class="work-item reveal"><img src="img/laser-steel-art-1920.webp" srcset="img/laser-steel-art-1080.webp 1080w, img/laser-steel-art-1920.webp 1920w" sizes="(max-width:640px) 100vw, (max-width:960px) 50vw, 33vw" alt="Detailed laser cut steel artwork lying on a concrete workshop floor" width="1080" height="1920" loading="lazy"><figcaption>Cut steel artwork</figcaption></figure>
+    </div>
   </div>
 </section>
 
@@ -514,6 +556,7 @@ section{padding:100px 0;position:relative}
     <div><span class="eyebrow reveal">FAQ</span><h2 class="reveal">Before you call</h2><p class="muted reveal">Still not sure? Email workshop@amc.co.nz or call the office on 06 877 8700 and ask.</p></div>
     <div class="faq-list reveal">
       <details><summary>What kind of work do you take on?</summary><p>Stainless steel, aluminium and sheet steel fabrication, CAD design and laser cutting (from our Waipukurau branch), structural engineering, transport engineering, certified welding and general engineering repairs. If you're not sure whether it's our kind of job, call and describe it.</p></details>
+      <details><summary>What can your laser cutter cut?</summary><p>We have the only fibre/CO2 laser cutter in Central Hawke's Bay, at our Waipukurau branch. It cuts aluminium up to 8mm, stainless steel up to 10mm, mild steel up to 20mm and plywood up to 10mm, and we can etch onto all of these materials too.</p></details>
       <details><summary>Do you do WOFs and mechanical work?</summary><p>Yes. AMC Engineering Ltd has a mechanic and a warrant of fitness service, alongside the engineering side. Email workshop@amc.co.nz or call Nick on 021 479 561 to book your vehicle in.</p></details>
       <details><summary>How do I get a quote?</summary><p>Call or email us with what you need: photos, a sketch or drawing, rough measurements, the material if you know it, and when you need it by. We'll come back to you with a price.</p></details>
       <details><summary>Can I just drop into the shop?</summary><p>Yes. The trade shop at 46 Takapau Road stocks bolts and fasteners, paint, oils, sealants, welding consumables and engineering supplies. Our Google listing shows Monday to Friday, 6am to 4.30pm. If you're after something specific, call ahead to check it's in stock.</p></details>
